@@ -1,0 +1,20 @@
+// Define variables
+study("Moving Average Crossover Signal")
+fast_length = 5
+slow_length = 24
+
+// Calculate fast and slow moving averages
+fast_ma = sma(close, fast_length)
+slow_ma = sma(close, slow_length)
+
+// Plot moving averages
+plot(fast_ma, color=blue, linewidth=1, title="Fast MA")
+plot(slow_ma, color=red, linewidth=1, title="Slow MA")
+
+// Generate signal
+buy = crossover(fast_ma, slow_ma)
+sell = crossunder(fast_ma, slow_ma)
+
+// Plot signal
+plotshape(buy, location=location.belowbar, style=shape.arrowup, size=size.small, color=green)
+plotshape(sell, location=location.abovebar, style=shape.arrowdown, size=size.small, color=red)
