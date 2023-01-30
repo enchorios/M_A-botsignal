@@ -22,3 +22,6 @@ Jika Anda tertarik untuk berkontribusi pada Bot Signal, Anda dapat memulai denga
 
 #Lisensi
 Bot Signal dilisensikan di bawah Lisensi Enchorios/M_A
+
+#Cara Kerja#
+copy kode Moving average signal di trading view lalu jalankan.
